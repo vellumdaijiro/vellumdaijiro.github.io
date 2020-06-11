@@ -42,7 +42,7 @@
     <h2 class="author">vellumdaijiro</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>4</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>0</strong><br>标签</div></a>
     </div>
@@ -70,105 +70,6 @@
 
         <section id="main">
   
-    <article id="post-flex布局火速上手" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/04/flex%E5%B8%83%E5%B1%80%E7%81%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="article-date">
-  <time class="post-time" datetime="2020-06-04T13:55:42.013Z" itemprop="datePublished">
-    <span class="post-month">6月</span><br/>
-    <span class="post-day">04</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/04/flex%E5%B8%83%E5%B1%80%E7%81%AB%E9%80%9F%E4%B8%8A%E6%89%8B/">flex布局火速上手</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="flex布局火速上手"><a href="#flex布局火速上手" class="headerlink" title="flex布局火速上手"></a>flex布局火速上手</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Flexible Box模型，通常被称为flexbox也就是<strong>flex布局</strong>（也被称为弹性盒子布局，以下统称flex），是一种<strong>一维</strong>的布局模型，它给flexbox的子元素提供了<strong>强大的空间分布和对齐能力</strong>。</p>
-<p>与grid布局不同，flex 是一种一维布局，但他比云老级别的float 也就是浮动（以下统称float）布局要更为简单易用，同时具有比float更好的性能。</p>
-<hr>
-<h2 id="先行体验"><a href="#先行体验" class="headerlink" title="先行体验"></a>先行体验</h2><p><img src="/css/images/image-20200604192047135.png" alt="image-20200604192047135"></p>
-<p>像是这样一个导航的布局 其实只要其实只要两三行代码就可以搞定，相信从float布局转换过来的程序员一定会对此赞不绝口。</p>
-<h4 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">  <span class="comment">/* 宽度 */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50vw</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 布局 */</span></span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: space-around;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/* 样式 */</span></span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="comment">/* 阴影可以写多个 */</span></span><br><span class="line">  <span class="attribute">box-shadow</span>: </span><br><span class="line">  <span class="number">#ddd</span> -<span class="number">5px</span> -<span class="number">5px</span> <span class="number">5px</span> -<span class="number">2px</span>,</span><br><span class="line">  <span class="number">#eee</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">5px</span> -<span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"nav"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>item6<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>怎么样，很强吧。</p>
-<hr>
-<h2 id="理论知识"><a href="#理论知识" class="headerlink" title="理论知识"></a>理论知识</h2><h3 id="容器与项目"><a href="#容器与项目" class="headerlink" title="容器与项目"></a>容器与项目</h3><p>当你使用了 <code>display: flex</code> 开启了flex布局之后，父元素会被称为容器(flex container) 子元素会被称为项目(flex item)。比如：上文中的 ul元素就是容器，而 li元素则是项目。</p>
-<p>需要补充的是： 当开启flex布局之后，有关于float的属性会失效，比如：<code>float: left</code> 或者 <code>clear: both</code> </p>
-<h3 id="轴线"><a href="#轴线" class="headerlink" title="轴线"></a>轴线</h3><p>容器内存在一根垂直当主轴和横向的交叉轴，其中项目默认会按照交叉轴排列，并且不换行，当然你可以在容器内用 <code>flex-direction</code> 来改变轴的方向，和使用 <code>flex-warp</code> 改变换行还是不换行</p>
-<p>其中 <code>flex-direction</code> 拥有四个属性，分别是：</p>
-<ul>
-<li><code>row</code> 让项目沿交叉轴排列</li>
-<li><code>row-reverse</code> 让项目沿交叉轴排列并反转</li>
-<li><code>column</code> 让项目沿主轴排列</li>
-<li><code>column-reverse</code> 让项目沿主轴排列并反</li>
-</ul>
-<p>而 <code>flex-warp</code> 只拥有两个属性，那就是换行盒不换行，分别是：</p>
-<ul>
-<li><code>warp</code></li>
-<li><code>no-warp</code></li>
-</ul>
-<hr>
-<h2 id="根据轴线排列项目"><a href="#根据轴线排列项目" class="headerlink" title="根据轴线排列项目"></a>根据轴线排列项目</h2><p>相信从基于盒模型的布局转换过来的程序员来说，让元素在纵向上居中一定用了各种各样的技巧，但如果使用flex布局的话只需要一句代码 <code>align-items: center</code> 他可以让项目居中在主轴上。</p>
-<p><img src="/css/images/3C147914-923F-40EF-817B-75AA05ED5B49.png" alt="3C147914-923F-40EF-817B-75AA05ED5B49"></p>
-<p>想让这四个项目居中只需要  <code>align-items: center</code> </p>
-<p><img src="/css/images/6BC4A574-1E6F-418E-9EFC-A8FA8AF6A4C4.png" alt="6BC4A574-1E6F-418E-9EFC-A8FA8AF6A4C4"></p>
-<h4 id="CSS部分-1"><a href="#CSS部分-1" class="headerlink" title="CSS部分"></a>CSS部分</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;  </span><br><span class="line"><span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">100px</span> auto;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>; </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30vh</span>;</span><br><span class="line">  <span class="attribute">list-style</span>: none;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="comment">/* 这几个都是比较常用的 */</span></span><br><span class="line">  <span class="comment">/* align-items: flex-start; 交叉轴顶部开始排列 */</span></span><br><span class="line">  <span class="comment">/* align-items: flex-end; 交叉轴底部开始排列 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#f00</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="既然可以纵向居中了，那横向居中看定也少不了"><a href="#既然可以纵向居中了，那横向居中看定也少不了" class="headerlink" title="既然可以纵向居中了，那横向居中看定也少不了"></a>既然可以纵向居中了，那横向居中看定也少不了</h5><p>你可以使用 <code>justify-content</code> 来控制它</p>
-<p>这里列出几个常用的属性</p>
-<ul>
-<li><code>space-evenry</code> </li>
-<li><code>space-between</code> </li>
-<li><code>space-around</code> </li>
-</ul>
-<h4 id="space-evenry"><a href="#space-evenry" class="headerlink" title="space-evenry"></a>space-evenry</h4><p><img src="/css/images/870118C1-189D-4201-854A-93B8335276C1.png" alt="870118C1-189D-4201-854A-93B8335276C1"></p>
-<h4 id="space-between"><a href="#space-between" class="headerlink" title="space-between"></a>space-between</h4><p><img src="/css/images/02700255-758E-4893-B846-8B4A366284DC.png" alt="02700255-758E-4893-B846-8B4A366284DC"></p>
-<h4 id="space-around"><a href="#space-around" class="headerlink" title="space-around"></a>space-around</h4><p><img src="/css/images/4BCAD39B-F792-4A53-8087-CDEDF973383F.png" alt="4BCAD39B-F792-4A53-8087-CDEDF973383F"></p>
-<h4 id="center"><a href="#center" class="headerlink" title="center"></a>center</h4><p>可以看到没有设置 <code>margin</code> 的项目紧紧的贴到了一起</p>
-<p><img src="/css/images/103638.png" alt="4BCAD39B-F792-4A53-8087-CDEDF973383F"></p>
-<hr>
-<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p>以上就是一些开发中比较常用的属性，更多的教程还请看下面的推荐</p>
-<h2 id="更多的教程推荐去"><a href="#更多的教程推荐去" class="headerlink" title="更多的教程推荐去"></a>更多的教程推荐去</h2><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool" target="_blank" rel="noopener">阮一峰的网络日志</a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank" rel="noopener">Mdn web docs</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/04/flex%E5%B8%83%E5%B1%80%E7%81%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" data-id="ckb1lug900000m4hp15uvhrun" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
     <article id="post-关于黑苹果" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/16/%E5%85%B3%E4%BA%8E%E9%BB%91%E8%8B%B9%E6%9E%9C/" class="article-date">
@@ -194,6 +95,13 @@
           
           
               
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2020/03/16/%E5%85%B3%E4%BA%8E%E9%BB%91%E8%8B%B9%E6%9E%9C/" class="leancloud_visitors" data-flag-title="关于黑苹果">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
 
           
         </div>
@@ -253,6 +161,13 @@
           
           
               
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2020/02/23/deepin%E6%8A%98%E8%85%BE%E8%AE%B0/" class="leancloud_visitors" data-flag-title="deepin折腾记">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
 
           
         </div>
@@ -318,6 +233,13 @@
           
           
               
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2020/01/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="我的第一篇博客">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
 
           
         </div>
@@ -386,7 +308,7 @@
     <h2 class="author">vellumdaijiro</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>4</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
       <a href="/categories"><div><strong>0</strong><br>分类</div></a>
       <a href="/tags"><div><strong>0</strong><br>标签</div></a>
     </div>
@@ -431,6 +353,7 @@
     </div>
     
   </div>
+  
 </footer>
     </div>
     
@@ -506,6 +429,115 @@ new WOW().init();
 </section>
 
 <script src="/js/script.js"></script>
+
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.article-title').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
 
 
 
